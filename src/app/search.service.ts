@@ -9,8 +9,8 @@ export class SearchService {
 
   constructor(private http: Http) { }
   
-  searchJob(){
-    
+  searchJob(job_title: string){
+      return this.http.get("https://www.google.com.ph/?q=${job_title}%20salary").map( res => res.json())
   }
 
 }
