@@ -1,13 +1,24 @@
 <div class="container">
   <div class="jumbotron">
     <div class="row pull-right">
-      <form class="navbar-form navbar-left" (submit)="searchJob(search.value)" role="search">
+      <form class="navbar-form navbar-left" (submit)="searchJob(jobtitle.value,country.value)" role="search">
            <div class="form-group">
-            <input type="text" class="form-control" #search placeholder="Search">
+            <input type="text" class="form-control" #jobtitle placeholder="Job Title">
+            <input type="text" class="form-control" #country placeholder="Country">
             </div>
-            <button type="submit" class="btn btn-default">Submit</button>
+            <button type="submit" class="btn btn-default">Search</button>
       </form>
     </div>
     
+  </div>
+</div>
+<div class="container">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+          <h2 class="panel-title">Content</h2>
+      </div>
+      <div class="panel-body">
+        <h5>Average Salary: </h5><span class="text-info">{{content?content:"Not Results Found"}}</span>
+      </div>
   </div>
 </div>

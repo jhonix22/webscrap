@@ -1,16 +1,19 @@
 import { Injectable } from '@angular/core';
-import {Http} from '@angular/http';
+import {Http,Headers, RequestMethod,Response} from '@angular/http';
 
 import 'rxjs/add/operator/map';
 
 
 @Injectable()
 export class SearchService {
-
+  headers: any;
   constructor(private http: Http) { }
   
-  searchJob(job_title: string){
-      return this.http.get("https://www.google.com.ph/?q=${job_title}%20salary").map( res => res.json())
+  searchJob(job_title: string, country: string){
+      return this.http.get(`http://localhost:8081/scrape/${job_title}/${country}`)
+            .map( (res:Response) => res.text());
+
   }
 
 }
+
