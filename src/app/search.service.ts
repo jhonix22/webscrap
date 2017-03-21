@@ -10,7 +10,7 @@ export class SearchService {
   constructor(private http: Http) { }
   
   searchJob(job_title: string, country: string){
-      return this.http.get(`http://localhost:8081/scrape/${job_title}/${country}`)
+      return this.http.get(`https://test-node123.herokuapp.com/scrape/${job_title}/${country}`)
             .map( (res:Response) => res.text());
 
   }
