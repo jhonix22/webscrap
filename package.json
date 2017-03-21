@@ -2,17 +2,20 @@
   "name": "webscrap",
   "version": "0.0.0",
   "license": "MIT",
+  "angular-cli": {},
   "scripts": {
     "ng": "ng",
     "start": "node scrap2.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "postinstall": "ng build"
   },
   "private": true,
   "dependencies": {
     "@angular/common": "^2.4.0",
+    "@angular/cli": "1.0.0-rc.2",
     "@angular/compiler": "^2.4.0",
     "@angular/core": "^2.4.0",
     "@angular/forms": "^2.4.0",
